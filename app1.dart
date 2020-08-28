@@ -1,5 +1,11 @@
+import 'dart:io';
+
 void main() {
-  var fname = "hafid";
-  String lname = "id-baha";
-  print(fname + " " + lname);
+  getUserName();
+}
+
+void getUserName() {
+  stdout.writeln("Please Enter Your Name : ?");
+  String name = stdin.readLineSync();
+  print("Your Name Is $name");
 }
