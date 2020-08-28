@@ -3,6 +3,7 @@ import 'dart:io';
 void main() {
   getUserName();
   getUserGeneralInfo();
+  userMemberShip();
 }
 
 // get the username from the user
@@ -30,4 +31,18 @@ void getUserGeneralInfo() {
   } else {
     print("Ops! You are not ready to start.");
   }
+}
+
+// introduce lists
+void userMemberShip() {
+  var types = ["admin", "author", "member", "poster", "validator"];
+  stdout.writeln("Please Chouse Your MemberShip ?");
+  int counter = 1;
+  for (var type in types) {
+    stdout.writeln("$counter - $type");
+    counter++;
+  }
+  int memberType = int.parse(stdin.readLineSync());
+  String selected = types[memberType - 1];
+  print("your membership type is $selected");
 }
