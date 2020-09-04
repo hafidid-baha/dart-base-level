@@ -13,4 +13,6 @@ class Product {
 // the main function
 void main() {
   var product = Product("prod", 12.0, "red");
+  // get object type
+  print('the object type ${product.runtimeType}');
 }
